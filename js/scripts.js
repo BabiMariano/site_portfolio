@@ -3,7 +3,7 @@
 const menuLinks = document.querySelectorAll('.menu-nav a[href^="#"]');
 const menuLinksMob = document.querySelectorAll('.menu-nav-mobile a[href^="#"]');
 const buttonEmail = document.querySelector(".e-mail");
-
+const buttonSobre = document.querySelectorAll('.buttonSobre')
 
 function getDistanceFromTheTop(element){
     const id = element.getAttribute("href");
@@ -26,11 +26,15 @@ menuLinksMob.forEach((link) => {
     link.addEventListener("click", scrollToSection);
 });
 
+buttonSobre.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+});
 
-buttonEmail.addEventListener("click", alertEmail)
-function alertEmail(){
-  alert("E-mail: bmariano2902@outlook.com")
-}
+
+// buttonEmail.addEventListener("click", alertEmail)
+// function alertEmail(){
+//   alert("Aguarde, você será redirecionado.")
+// }
 
 
 

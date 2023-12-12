@@ -84,6 +84,7 @@ header .menu-nav-mobile{
 
 .menu-nav a:hover:last-of-type{
     text-decoration: underline;
+    font-weight: 500;
 }
 
 .menu-nav a.contato:hover{
@@ -125,6 +126,7 @@ main{
     top: 23px;
 }
 
+
 #principal .container{
     position: relative;
 }
@@ -149,7 +151,8 @@ main{
     margin-bottom: 35px;
 }
 
-#principal button{
+#principal .buttonSobre{
+    display: inline-block;
     background-color: var(--cor-secundaria);
     color: #ffffff;
     border-radius: 100px;
@@ -159,19 +162,23 @@ main{
     font-weight: 600;
 }
 
-#principal .cont-skills{
-   margin-bottom: 320px; 
+#principal{
+   margin-bottom: 220px; 
 }
 
-#principal .cont-skills .cont-slider{
-    display: flex;
-    gap: 56px;
-}
 
-#principal .cont-slider .slider-responsivo{
-    display: none;
+#principal .mySwiper2{
+    /* display: block; */
+    height: 146px;
+    width: 100%;
 }
-/*  */
+#principal .swiper .swiper-wrapper{
+    width: 146px;
+    
+    .swiper-slide{
+        width: 100%;
+    }
+}
 
 /* Seção sobre mim */
 #sobre-mim .container{
@@ -228,33 +235,34 @@ main{
     }
 }
 
-#sobre-mim .cont-skills {
+#sobre-mim .swiper {
     position: relative;
     width: 100%;
-    height: 123px;
+    height: 132px;
     overflow: hidden;
 }
 
-#sobre-mim .cont-slider{
+#sobre-mim .swiper-wrapper{
     display: flex;
     justify-content: space-between;
-    gap: 38px;
+    /* gap: 38px; */
     position: absolute;
     z-index: -1;
-    animation: scroll 10s linear infinite;
-    width: 92px;
+    /* animation: scroll 10s linear infinite; */
+    width: 100px;
+    /* height: 100%; */
 }
 
-#sobre-mim .cont-slider .skill{
-    height: 100%;
-    width: 92px;
+#sobre-mim .swiper-wrapper .swiper-slide{
+    /* height: 100%; */
+    width: 100%; 
 }
 
-#sobre-mim .cont-slider .skill img{
-    width: 92px;
+#sobre-mim .swiper-wrapper .swiper-slide img{
+    width: 100%;
 }
 
-#sobre-mim .skill p{
+#sobre-mim .swiper-slide p{
     margin-top: 8px;
     text-align: center;
 }
@@ -264,7 +272,14 @@ main{
 }
 .cont-direita .foto-sobre{
     display: flex;
+
+    
 }
+
+#sobre-mim .cont-direita .foto-sobre .img-perfil{
+    position: relative;
+}
+
 
 #sobre-mim .cont-direita .star-perfil{
     position: absolute;
@@ -419,7 +434,7 @@ footer p{
         max-width: 950px;
     }
     .skill-principal{
-        width: 100px;
+        /* width: 100px; */
     }
     h1{
         font-size: 56px;
@@ -433,20 +448,13 @@ footer p{
     .container{
         max-width: 750px;
     }
-    @keyframes scroll{
-        0%{
-            transform: translateX(0);
-        }
-        100%{
-            transform: translateX(calc(-100px * 6));
-        }
+    #principal{
+        margin-bottom: 120px;
     }
-    #principal .cont-slider .slider-responsivo{
-        display: flex;
-        gap: 56px;
-    }
+
+    
     #principal .cont-slider{
-        animation: scroll 10s linear infinite;
+        /* animation: scroll 10s linear infinite; */
         width: calc(100px);
     }
     h1{
@@ -463,9 +471,11 @@ footer p{
         display: flex;
         justify-content: center
     }
+
+
     #sobre-mim .cont-direita .star-perfil{
-        position: absolute;
-        right: 24%; 
+        
+        display: none;
     }
     #projetos .container{
         max-width: 550px;
