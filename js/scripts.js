@@ -31,15 +31,6 @@ buttonSobre.forEach((link) => {
 });
 
 
-// buttonEmail.addEventListener("click", alertEmail)
-// function alertEmail(){
-//   alert("Aguarde, você será redirecionado.")
-// }
-
-
-
-
-
 
 function smoothScrollTo(endX, endY, duration) {
     const startX = window.scrollX || window.pageXOffset;
