@@ -170,13 +170,13 @@ main{
 
 
 #principal .mySwiper2{
-    height: 146px;
+    height: 146px;                  
     width: 100%;
 }
 #principal .swiper .swiper-wrapper{
     width: 146px;
     
-    .swiper-slide{
+    .swiper-slide .skill-principal{
         width: 100%;
     }
 }
