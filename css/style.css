@@ -83,6 +83,11 @@ header .menu-nav-mobile{
     font-weight: 500;
 }
 
+.menu-nav a:hover{
+    font-weight: 600;
+    
+}
+
 
 .menu-nav a.contato:hover{
     background: #72313fcc;
@@ -126,6 +131,7 @@ main{
 
 #principal .container{
     position: relative;
+    margin-top: 160px; 
 }
 
 #principal .nome{
@@ -135,7 +141,6 @@ main{
     border-radius: 100px;
     padding: 4px 14px;
     border: 1px solid #F4AFBC;
-    margin-top: 160px;
     margin-bottom: 0px;
     letter-spacing: 1px;
 }
@@ -160,7 +165,7 @@ main{
 }
 
 #principal{
-   margin-bottom: 220px; 
+   margin-bottom: 160px; 
 }
 
 
@@ -285,11 +290,10 @@ main{
 /* Seção projetos */
 #projetos h2{
     text-align: center;
-    margin-top: 198px;
     margin-bottom: 80px;
 }
 #projetos .container{
-    max-width: 60%;
+    max-width: var(--responsivo);
 }
 
 #projetos .projeto{
@@ -300,6 +304,7 @@ main{
 
 #projetos{
     margin-bottom: 140px;
+    margin-top: 140px;
     
     .projeto .img-projeto{
         width: 384px;
@@ -421,14 +426,16 @@ footer p{
 
 @media screen and (max-width:1440px){
     .container{
-        max-width: 1150px;
+        max-width: 80%;
     }
+    #projetos .container{
+        max-width: 80%;
+    }
+
 }
 
 @media screen and (max-width:1230px){
-    .container{
-        max-width: 950px;
-    }
+    
     h1{
         font-size: 56px;
     }
@@ -438,13 +445,14 @@ footer p{
 }
 
 @media screen and (max-width:1050px){
-    .container{
-        max-width: 750px;
-    }
+    
     #principal{
         margin-bottom: 120px;
     }
 
+    #principal .container{
+        margin-top: 100px;
+    }
     
     #principal .cont-slider{
         /* animation: scroll 10s linear infinite; */
@@ -470,8 +478,10 @@ footer p{
         
         display: none;
     }
-    #projetos .container{
-        max-width: 550px;
+    
+    #projetos{
+        margin-bottom: 140px;
+        margin-top: 120px;
     }
 
     #projetos .container .projeto{
@@ -499,6 +509,9 @@ footer p{
     }
     header .menu-nav-mobile{
         display: flex;
+        /* justify-content: center; */
+        
+        
     }
     .menu-nav-mobile .mobile-menu{
         display: block;
@@ -506,7 +519,7 @@ footer p{
         position: fixed;
         z-index: 11;
         right: 10%;
-        top: 45px;
+        top: 40px;
     }
 
     .menu-nav-mobile .mobile-menu div{
@@ -518,11 +531,11 @@ footer p{
     }
 
     .menu-nav-mobile .nav-list-mobile{
-        padding-top: 80px;
+        padding-top: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        gap: 88px;
         position: fixed;
         z-index: 10;
         top: 0px;
@@ -562,6 +575,11 @@ footer p{
         font-weight: 500;
         
     }
+    .menu-nav-mobile a:hover{
+        font-weight: 600;
+        
+    }
+    
 
     .mobile-menu.active .line1{
         transform: rotate(-45deg) translate(-8px, 8px);
@@ -575,11 +593,9 @@ footer p{
 }
 
 @media screen and (max-width:850px){
-    .container{
-        max-width: 80%;
-    }
+   
 
-     h1{
+    h1{
        font-size: 40px; 
     }
     #principal .container .area{
@@ -591,6 +607,10 @@ footer p{
 }
 
 @media screen and (max-width:730px){
+    .container{
+        max-width: 80%;
+    }
+
     header .menu-nav .nav-list{
         gap: 20px;
     }
@@ -598,8 +618,8 @@ footer p{
         position: absolute;
         right: 16%;  
     }
-    #projetos .container{
-        max-width: 50%;
+    #projetos{
+        margin-bottom: 100px;  
     }
 }
 
@@ -611,6 +631,9 @@ footer p{
 }
 
 @media screen and (max-width:670px){
+    .container{
+        max-width: 90%;
+    }
     #contato .container{
         max-width: 90%;
     }
@@ -620,6 +643,16 @@ footer p{
     h2{
         font-size: 20px;
     }
+    #principal {
+        margin-bottom: 100px;
+    }
+    #principal .container {
+        margin-top: 80px;
+    }
+    #sobre-mim .cont-direita .foto-sobre .img-perfil{
+        width: 90vw;
+    }
+
 }
 
 
